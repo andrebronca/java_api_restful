@@ -35,7 +35,10 @@ public class ProdutoService {
     }
 
     public Produto atualizar(Integer id, Produto produto){
-        produto.setId(id);
-        return produtoRepository.atualizar(produto);
+        if (id > 0){
+            produto.setId(id);
+            return produtoRepository.atualizar(produto);
+        }
+        return null;
     }
 }

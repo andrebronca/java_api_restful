@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
+import com.teste.primeiroexemplo.exception.ResourceNotFoundException;
 import com.teste.primeiroexemplo.model.Produto;
 
 @Repository
@@ -39,10 +40,15 @@ public class ProdutoRepository {
         produtos.removeIf(p -> p.getId() == id);
     }
 
+    /**
+     * @param produto
+     * @return
+     */
     public Produto atualizar(Produto produto){
         Optional<Produto> produtoEncontrado = obterPorId(produto.getId());
-        if (produtoEncontrado == null){
-            throw new InputMismatchException("Produto não encontrado!");
+        
+        if (produtoEncontrado.empty() == Optional.empty() ){
+            throw new ResourceNotFoundException("Produto não encontrado!");
         }
         deletar(produto.getId());
         adicionar(produto, false);
