@@ -1,5 +1,8 @@
 package com.teste.primeiroexemplo.model;
+import javax.persistence.Entity;
 
+
+@Entity
 public class Produto { 
 
     //#region Atributos
