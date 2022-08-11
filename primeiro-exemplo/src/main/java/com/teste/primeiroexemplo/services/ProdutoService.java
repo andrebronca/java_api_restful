@@ -42,6 +42,7 @@ public class ProdutoService {
         if (id > 0){
             produto.setId(id);
             // return produtoRepository.atualizar(produto);
+            //verificar se está atualizando.
             return produtoRepository.save(produto);
         }
         return null;
