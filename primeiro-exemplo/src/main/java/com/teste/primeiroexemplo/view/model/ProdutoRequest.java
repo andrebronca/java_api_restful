@@ -1,19 +1,14 @@
-package com.teste.primeiroexemplo.model;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package com.teste.primeiroexemplo.view.model;
 
 /**
- * só vai comunicar entre o service e o repository
+ * tipo de dado que se espera receber quando alguém fizer uma requisição para o back-end
+ * similar ao ProdutoDTO
+ * Quando é feito cadastro, não precisa fornecer ID.
+ * Quando é feita a consulta de todos, não precisa de ID
+ * Quando é feita uma atualização o ID vai na url
+ * Quando é feito uma exclusão o ID vai na url
  */
-@Entity
-public class Produto { 
-
-    //#region Atributos
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class ProdutoRequest {
 
     private String nome;
     
@@ -24,13 +19,6 @@ public class Produto {
     private String observacao;
 
     //#region Getters e Setters
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;
@@ -63,5 +51,4 @@ public class Produto {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
-
 }
