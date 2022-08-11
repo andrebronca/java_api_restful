@@ -1,0 +1,13 @@
+Criar uma api Restful para controle de produtos
+
+model:
+    Produto: id, nome, quantidade, valor, observacao
+
+repository: (comunica com o BD)
+    Produto: obterTodos, obterPorId, adicionar, atualizar, deletar
+
+services:
+    Produto: obterTodos, obterPorId, adicionar, atualizar, deletar
+
+controller:
+    Produto: obterTodos, obterPorId, adicionar, atualizar, deletar
