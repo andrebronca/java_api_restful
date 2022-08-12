@@ -8,6 +8,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.teste.primeiroexemplo.exception.ResourceInternalServerErrorException;
 import com.teste.primeiroexemplo.exception.ResourceNotFoundException;
 import com.teste.primeiroexemplo.model.Produto;
 import com.teste.primeiroexemplo.repository.ProdutoRepository;
