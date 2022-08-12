@@ -8,5 +8,5 @@ import com.teste.primeiroexemplo.shared.ProdutoDTO;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Integer> {
-    
+    aula 15 parei em 19:37
 }
