@@ -1,18 +1,12 @@
-package com.teste.primeiroexemplo.model;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package com.teste.primeiroexemplo.shared;
 
 /**
- * só vai comunicar entre o service e o repository
+ * Identico ao model Produto, não utiliza as anotations do modelo
+ * Objeto que será trafegado na controller, o model ficará oculto
+ * Este objeto será o de transferência entre a controller e a service
  */
-@Entity
-public class Produto { 
+public class ProdutoDTO {
 
-    //#region Atributos
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String nome;
@@ -63,5 +57,4 @@ public class Produto {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
-
 }

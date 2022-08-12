@@ -1,18 +1,10 @@
-package com.teste.primeiroexemplo.model;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package com.teste.primeiroexemplo.view.model;
 
 /**
- * só vai comunicar entre o service e o repository
+ * Obtém todos os dados na consulta
+ * O que espera receber
  */
-@Entity
-public class Produto { 
-
-    //#region Atributos
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class ProdutoResponse {
     private Integer id;
 
     private String nome;
@@ -63,5 +55,4 @@ public class Produto {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
-
 }
